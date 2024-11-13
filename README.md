@@ -1,0 +1,2 @@
+# jobfit
+GenAI hobby project
