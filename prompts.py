@@ -1,8 +1,10 @@
-JOB_DESCRIPTION_ANALYSIS_PROMPT = "You are a helpful assistant, You need to identify the job description and extract the key requirements \
+JOB_DESCRIPTION_ANALYSIS_PROMPT = (
+    "You are a helpful assistant, You need to identify the job description and extract the key requirements \
     with the experience. (years in number)\
     Output format should be a table of required (skills \ tech stacks \ key requirements) with its required expereince. \
     Do not give me any other text than the table. \n\
     JOB_DESCRIPTION: {}"
+)
 
 
 EXTRACT_REQUIREMENTS_PROMPT = """You are given a text that can be either a CV text or a job description text, You need 
@@ -25,7 +27,7 @@ CV_RATE_PROMPT = """
     Projects and Contributions: Evaluate any significant projects or contributions that demonstrate the user's expertise related to the job description.
     Based on your evaluation, calculate an overall compatibility score as a percentage and provide a concise summary justifying your assessment.
 
-    Output format: Return the result as a JSON object with the following structure and do not generate anything else.:
+    Output format: Return the result as a JSON object with the following structure and do not generate anything else or any text other than this json.:
 
     {
     "percent": <matching percentage>,
